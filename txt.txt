@@ -1,0 +1,771 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+:root{
+     --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --accent-color: #f39c12;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --heading-color: #111111;
+  
+
+  
+  /* ألوان الحالة */
+  --success-color: #198754;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --info-color: #0dcaf0;
+
+  /* الفونت */
+  --font-family-base: 'Inter', sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 20px;
+ --font-size-xl: 32px;
+ --font-size-xxl: 48px;
+  --font-size-xxxl: 64px;
+  --font-size-giant: 80px;
+
+  /* الحواف والمسافات */
+  --border-radius: 6px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* الظلال */
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --border-color: #2c2c2c;
+
+}
+body{
+    height: 100vh;
+    width: 100%;
+   background-color: var(--border-color);
+}
+
+/* header */
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    padding: 0.8rem;
+    box-shadow: 1px 0px 10px 1px black;
+    background-color: rgba(0, 0, 0, 0.304);
+    
+}
+/* header anv */
+header nav{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header nav ul li{
+    margin: 0.6rem ;
+    list-style: none;
+    font-size: var( --font-size-base);
+    position: relative;
+    cursor: pointer;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--background-color);
+}
+/* header h3 logo */
+header h3{
+    font-size: var(--font-size-lg);
+   color: var(--secondary-color);
+   cursor: pointer;
+}
+
+/* header creat animation after */
+header nav ul li ::after{
+    content: "" ;
+    width: 0 ;
+    background-color: var(--background-color) ;
+    height: 2% ;
+    position: absolute ;
+    left: 0 ;
+    bottom: -0.3rem ;
+    transition: ease 1s;
+
+}
+/* header start animation after hover */
+header nav ul li:hover ::after{
+width: 70%;
+}
+
+/* end header */
+
+
+/* start section 1 */
+
+#sec1{
+    background: linear-gradient(to bottom ,rgba(0,0,0,0) , black) , url(home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* height: 100vh; */
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+    
+}
+
+/* container1 */
+#sec1 .container1{
+    margin-top: 4rem;
+    margin-left: 3rem;
+    padding: 1rem;
+    width: 100%;
+}
+/* btn and p , h2, h4 */
+:is(h4, h2 ,p, #btn1){
+    margin-bottom: 0.8rem;
+     color: var(--background-color);
+}
+
+/* just h2 */
+.container1 h2{
+    font-size: var(--font-size-xxl);
+    font-family: var(--font-family-base);
+    color: var(--background-color);
+}
+
+/* just btn */
+#sec1 .container1 #btn1{
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.265);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family-base);
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+}
+
+/* container 2 */
+#sec1 .container2{
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+/* container2 and local container */
+#sec1 .container2 .localconta{
+    width: 60%;
+       display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.7rem;
+    perspective: 100px;
+}
+
+
+/* local container with his child col1  */
+#sec1 .container2 .localconta .col1{
+    width: 220px;
+    height: 150px;
+    background-color: var(--background-color);
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+}
+
+/* just p */
+#sec1 .container2 .localconta .col1 p{
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+}
+
+/* just images */
+#sec1 .container2 .localconta .col1 #im1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease 2s;
+    cursor: pointer;
+}
+
+/* images hover event */
+#sec1 .container2 .localconta .col1 #im1:hover{
+    transform: scale(1.1);
+
+}
+
+/* end section 1 */
+
+/* start section 2 */
+
+#sec2{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0rem;
+}
+/* containers parent */
+.contaparent{
+height: 100vh;
+    background-color: black;
+ display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* containers parent with first child */
+#sec2 .contaparent .conatiner1{
+    padding: 2rem;
+}
+
+/* container parent with first child with his child h1 and p and btn2 */
+#sec2 .contaparent .conatiner1 h1, p ,#btn2{
+    margin-bottom: 0.8rem;
+    color: var(--background-color);
+    font-family: var(--font-family-base);
+}
+/* h1 whit his parent */
+#sec2 .contaparent .conatiner1 h1{
+    font-size: var(--font-size-xl);
+}
+/* paragraph with his parent */
+#sec2 .contaparent .conatiner1 p{
+    color: var(--secondary-color)
+}
+
+/* btn2 with hir parent */
+#sec2 .contaparent .conatiner1 #btn2{
+        padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.265);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family-base);
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+}
+
+/* container 2 */
+#sec2 .contaparent .container2{
+    overflow: hidden;
+    width: 28%;
+    height: 50%;
+}
+
+/* container 2 with her child im2 */
+#sec2 .contaparent .container2 #im2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease 2s
+}
+/* im2 hover */
+#sec2 .contaparent .container2 #im2:hover{
+    transform: scale(1.1);
+}
+
+/* second container in sec2 */
+#sec2 .secondcontainer{
+    width: 100%;
+    padding: 2rem;
+}
+/* second container in sec2 with his child h1 */
+#sec2 .secondcontainer h1{
+    text-align: center;
+    color: var(--background-color);
+    font-size: var(--font-size-xl);
+    font-family: var(--font-family-base);
+}
+
+/* end section 2 */
+
+
+/* strat sec3 */
+
+#sec3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background: black;
+    padding: 1rem 0rem;
+}
+
+/* section 3 with his first child */
+#sec3 .container1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    perspective: 300px;
+    width: 50%;
+    gap: 1rem;
+    margin-left: -3rem;
+} 
+
+
+/* container 1 with his first child col1 */
+#sec3 .container1 .col1{
+   width: 220px;
+    height: 270px;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* col1 with his child im3 */
+#sec3 .container1 .col1 #im3{
+   width: 220px;
+   height: 190px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: ease 2s;
+}
+
+
+/* im3 hover */
+#sec3 .container1 .col1 #im3:hover{
+    transform: scale(1.1);
+    margin-bottom: 0.5rem;
+}
+
+
+/* col1 with his child paragraph */
+#sec3 .container1 .col1 p {
+    color: var(--background-color);
+    font-family: var(--font-family-base);
+    
+}
+
+/* it box (icons with name ) */
+#sec3 .container1 .col1 .it{
+    display: flex;
+    align-items: center;
+      color: var(--secondary-color);
+}
+
+
+/* end section 3 */
+
+
+/* start  scetion 4 */
+
+#sec4{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(to bottom ,rgba(0,0,0,1)0% , rgba(0,0,0,0)40%,  rgba(0,0,0,0.5)50%   , rgba(0,0,0,1) 89%) , url(explore-beach.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+}
+
+/* sec4 with first child */
+#sec4 .container1{
+    margin-left: 5rem;
+    margin-top: 10rem;
+}
+
+/* container1 with his child h1 */
+#sec4 .container1 h1{
+    margin-bottom: 0.6rem;
+    color: var(--background-color);
+    font-family: var(--font-family-base);
+
+}
+
+/* container1 with another child p */
+#sec4 .container1 p{
+    color: var(--secondary-color);
+    font-family: var(--font-family-base);
+}
+
+/* END SECTION 4 */
+
+
+/* start section 5 */
+
+
+#sec5{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0rem;
+}
+
+/* containers parent */
+.contaparent5{
+height: 100vh;
+    background-color: black;
+ display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* containers parent with first child */
+#sec5 .contaparent5 .conatiner1{
+    padding: 2rem;
+}
+
+/* container parent with first child with his child h1 and p and btn2 */
+#sec5 .contaparent5 .conatiner1 h1, p ,#btn2{
+    margin-bottom: 0.8rem;
+    color: var(--background-color);
+    font-family: var(--font-family-base);
+}
+/* h1 whit his parent */
+#sec5 .contaparent5 .conatiner1 h2{
+    font-size: var(--font-size-xl);
+    font-family: var(--font-family-base);
+}
+/* paragraph with his parent */
+#sec5 .contaparent5 .conatiner1 p{
+    color: var(--secondary-color)
+}
+
+/* btn2 with hir parent */
+#sec5 .contaparent5 .conatiner1 #btn2{
+        padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.265);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family-base);
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+}
+
+/* container 2 */
+#sec5 .contaparent5 .container2{
+    overflow: hidden;
+    width: 20%;
+    height: 65%;
+}
+
+/* container 2 with her child im2 */
+#sec5 .contaparent5 .container2 #im2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease 2s
+}
+/* im2 hover */
+#sec5 .contaparent5 .container2 #im2:hover{
+    transform: scale(1.1);
+}
+
+/* second container in sec2 */
+#sec5 .secondcontainer5{
+    width: 100%;
+    padding: 2rem;
+}
+/* second container in sec2 with his child h1 */
+#sec5 .secondcontainer5 h1{
+    text-align: center;
+    color: var(--background-color);
+    font-size: var(--font-size-xl);
+    font-family: var(--font-family-base);
+}
+
+/* input */
+#sec5 .contaparent5 .conatiner1 #inpo{
+    width: 73%;
+    padding: 0.5rem ;
+    outline: none;
+    border: none;
+    background:rgb(18, 18, 18);
+    margin-bottom: 0.8rem;
+    color: var(--background-color);
+}
+
+
+/* end section 5 */
+
+
+/* start section 6 */
+#sec6{
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--heading-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    cursor: text;
+}
+
+#sec6 .container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--background-color);
+    width: 90%;
+    margin: auto;
+}
+
+
+#sec6 .container1 .allconta2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#sec6 .container1 .Travel h2{
+font-size: var(--font-size-lg);
+}
+
+
+#sec6 .container1 .Travel #pa{
+    color: var(--secondary-color);
+}
+
+#sec6 .container1 .allconta2 .conta2{
+    display: flex;
+    flex-direction: column;
+       font-family: var(--font-family-base);  
+}
+ 
+
+#sec6 .container1 .allconta2 .conta2 h3 , span{
+    margin-bottom: 0.4rem;
+}
+
+#sec6 .container1 .allconta2 .conta2 span{
+    color: var(--secondary-color);
+}
+
+#sec6 .container2{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--background-color);
+}
+
+#sec6 .container2 .col2{
+    margin-top: 0.5rem; 
+ 
+}
+#sec6 .container2 .col2 i{
+    margin: 0.3rem;
+    cursor: pointer;
+}
+
+
+
+/* end section 6 */
+
+
+
+
+
+
+
+
+
+api key 645d61fb4c224297ab4115320251807
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+واش خاصك تزيد تعلم في الـ API ولا تسالي وتبدأ مشروع؟
+1. الأساسيات في الـ API:
+من اللي شفنا الكود ديالك، راه عندك فكرة مزيانة على:
+
+طرق HTTP (GET, POST, PUT, DELETE)
+
+كيفاش تبعث وتستقبل JSON
+
+كيفاش تتعامل مع fetch و async/await
+
+كيفاش تخزن البيانات في localStorage وتحدثها
+
+هاد الأساسيات مهمة بزاف وممكن تبدأ تخدم بيهم مشاريع بسيطة.
+
+2. شنو ممكن تزيد تتعلم في API باش تكون أقوى؟
+التعامل مع الأخطاء (Error Handling) بشكل متقدم: مثلاً، تعلم كيفاش تتعامل مع حالات الخطأ المختلفة (404, 500...) وكيفاش تعرض رسائل واضحة للمستخدم.
+
+Authentication و Authorization: كيفاش تستعمل توكنز (JWT، OAuth) باش تحمي الـ API ديالك.
+
+Pagination و Filtering: كيفاش تجيب البيانات على دفعات، وتفلترها باش ماتكونش ثقل على التطبيق.
+
+API Rate Limiting: كيفاش تتحكم فعدد الطلبات اللي ممكن يتعملو.
+
+استعمال أدوات مثل Postman لاختبار API بسهولة.
+
+التعامل مع APIs حقيقية (مش فقط jsonplaceholder) بحال APIs ديال الطقس، الأخبار، الدفع الإلكتروني...
+
+3. شنو تنصحك دابا؟
+لو باغي تتعلم أكثر على API و backend: زيد تكتشف تقنيات بحال Node.js + Express، باش تقدر تكتب API ديالك بيدك، وتتعلم كيفاش تسيطر على كلشي.
+
+لو باغي تبدأ تبرمج مواقع و تستعمل API: بدا مشروع صغير تستعمل فيه هاد المعارف اللي عندك (مثلاً مدونة، تطبيق مهام، متجر صغير).
+
+دمج Frontend + API: تعلم كيفاش تربط بين واجهة المستخدم و API باش تكون تجربة كاملة.
+
+4. نصيحة عملية:
+ابدأ مشروع صغير (مثلاً ToDo List أو مدونة)، استعمل فيه CRUD (Create, Read, Update, Delete) عبر API.
+
+من بعد، زيد تحسن وتعلم تقنيات جديدة تدريجياً.
+
+ماتنساش تجرب تبني API خاصة بيك (بـ Node.js مثلاً) وتتعلم كيفاش تخدم backend.
+
+خلاصة:
+اللي تعلمتي كافٍ باش تبدأ مشروع عملي. من الأفضل تدمج اللي تعلمتي مع تطبيق عملي. وفي نفس الوقت، ماتوقفش عن تعلم حاجات جديدة في API و backend.
+
+واش بغيتي نعاونك ندير معاك خطة تعلم أو مشروع بسيط باش تبدأ؟ 😊
+
+A network error occurred. Please check your connection and try again. If this issue persists please contact us through our help center at help.openai.com.
+
+
+Retry
+
+
+You said:
+db ana ba9i flfront end back end mzal manbdah y3ni tansali js wb3do react 3ad nduz  lback end wbrit nswl chno 9sdt b دمج Frontend + API: تعلم كيفاش تربط بين واجهة المستخدم و API باش تكون تجربة كاملة.        wkfx had l blan mafhmtoch dyal ---> ابدأ مشروع صغير (مثلاً ToDo List أو مدونة)، استعمل فيه CRUD (Create, Read, Update, Delete) عبر API.
+
+
+
+
+
+
+
+
+
+
+
+
+
+function updateTotal() {
+  let total = 0;
+
+  data.forEach(item => {
+    total += item.splace * item.quantite;
+  });
+
+  document.querySelector(".total1").textContent = total;
+  localStorage.setItem("total", total);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+place.addEventListener("click", () => {
+  dat.quantite++;
+  span.textContent = dat.quantite;
+
+  localStorage.setItem("mylocal", JSON.stringify(data));
+  updateTotal(); // نعيطو هنا
+});
+
+mince.addEventListener("click", () => {
+  dat.quantite--;
+  if (dat.quantite < 0) dat.quantite = 0;
+  span.textContent = dat.quantite;
+
+  localStorage.setItem("mylocal", JSON.stringify(data));
+  updateTotal(); // حتى هنا
+});
+
+
+
+
+
+
+
+let savedTotal = localStorage.getItem("total");
+if (savedTotal) {
+  document.querySelector(".total1").textContent = savedTotal;
+}
