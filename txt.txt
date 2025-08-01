@@ -769,3 +769,11 @@ let savedTotal = localStorage.getItem("total");
 if (savedTotal) {
   document.querySelector(".total1").textContent = savedTotal;
 }
+
+
+
+
+
+
+
+https://github.com/Zakariyabelkassem/beachproject
